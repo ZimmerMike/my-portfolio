@@ -11,6 +11,7 @@ body {
     color: black;
     height: 100vh;
     font-family: Arial, sans-serif;
+    line-height: 1.75;
 }
 
 .general-container {
@@ -47,7 +48,7 @@ body {
 }
 
 .links-container > a:hover {
-    color: rgb(140, 140, 140);
+    color: rgb(0, 93, 224);
 }
 
 .nav-container {
@@ -72,7 +73,7 @@ body {
     flex-direction: column;
     align-items: center;
     list-style: none;
-    gap: 2em;
+    gap: 1em;
     padding: 0;
 }
 
@@ -91,6 +92,10 @@ body {
     transition: ease;
     transition-duration: 300ms;
     border-radius: 5px;
+}
+
+.navbar-item i {
+    margin-right: 1em;
 }
 
 .navbar a:hover {
@@ -114,7 +119,7 @@ body {
 }
 
 .content-container > section {
-    padding-top: 5em;
+    padding-top: 2em;
 }
 
 hr.gradient {
@@ -139,6 +144,22 @@ hr.gradient {
     border-radius: 3px;
     margin-top: 2em;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.card-header-subtitle {
+    font-weight: bold;
+    float: left;
+}
+
+.card-header-date {
+    color: rgba(0, 0, 0, .5);
+    font-size: small;
+    font-weight: bold;
+    float: right;
+}
+
+.card-content {
+    margin-top: 1em;
 }
 
 /*responsive design*/
