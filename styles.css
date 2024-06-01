@@ -10,7 +10,7 @@ body {
     background-color: whitesmoke;
     color: black;
     height: 100vh;
-    font-family: Arial, sans-serif;
+    font-family: "Open Sans";
     line-height: 1.75;
 }
 
@@ -77,9 +77,10 @@ body {
     padding: 0;
 }
 
-.navbar > a {
+.navbar a {
     text-decoration: none;
     color: black;
+    border-radius: 5px;
 }
 
 .navbar-item {
@@ -238,3 +239,54 @@ hr.gradient {
         gap: 4em;
     }
 }
+
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .nav-container {
+        background-color: #1d1d1d;
+    }
+
+    .links-container i {
+        transition: ease;
+        transition-duration: 300ms;
+        color: #fff;
+    }
+
+    .links-container i:hover {
+        color: rgb(0, 93, 224);
+    }
+
+    .navbar-item {
+        color: #fff;
+    }
+
+    .navbar a {
+        transition: ease;
+        transition-duration: 300ms;
+    }
+
+    .navbar a:hover {
+        background-color: #000;
+        color: black;
+    }
+    
+    .navbar a.active {
+        background-color: #000;
+        font-weight: bolder;
+        color: black;
+    }
+
+    .card {
+        color: #fff;
+        background-color: #1d1d1d;
+    }
+
+    .card-header-date {
+        color: #d9d9d9;
+    }
+  }
