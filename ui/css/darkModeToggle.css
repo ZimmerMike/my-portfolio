@@ -1,0 +1,25 @@
+#hybrid {
+    visibility: hidden;
+}
+
+#theme-toggle {
+    visibility: hidden;
+}
+
+#theme-toggle+label {
+    display: inline-block;
+    cursor: pointer;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+#theme-toggle:not(:checked)+label {
+    background-color: gold;
+}
+
+#theme-toggle:checked+label {
+    background-color: transparent;
+    box-shadow: inset -8px -7px 1px 1px #fff;
+}

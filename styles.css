@@ -12,6 +12,7 @@ body {
     height: 100vh;
     font-family: "Open Sans";
     line-height: 1.75;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .general-container {
@@ -239,54 +240,3 @@ hr.gradient {
         gap: 4em;
     }
 }
-
-
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #000;
-        color: #fff;
-    }
-
-    .nav-container {
-        background-color: #1d1d1d;
-    }
-
-    .links-container i {
-        transition: ease;
-        transition-duration: 300ms;
-        color: #fff;
-    }
-
-    .links-container i:hover {
-        color: rgb(0, 93, 224);
-    }
-
-    .navbar-item {
-        color: #fff;
-    }
-
-    .navbar a {
-        transition: ease;
-        transition-duration: 300ms;
-    }
-
-    .navbar a:hover {
-        background-color: #000;
-        color: black;
-    }
-    
-    .navbar a.active {
-        background-color: #000;
-        font-weight: bolder;
-        color: black;
-    }
-
-    .card {
-        color: #fff;
-        background-color: #1d1d1d;
-    }
-
-    .card-header-date {
-        color: #d9d9d9;
-    }
-  }

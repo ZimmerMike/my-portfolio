@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./ui/css/darkMode.css">
+    <link rel="stylesheet" href="./ui/css/darkModeToggle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,6 +32,10 @@
                 <a href="#projects"><li class="navbar-item"><i class="fa-lg fas fa-folder"></i><span>PROYECTOS</span></li></a>
                 <a href="#education"><li class="navbar-item"><i class="fa-lg fas fa-graduation-cap"></i><span>EDUCACION</span></li></a>
             </ul>
+            <div class="container">
+              <input type="checkbox" id="theme-toggle">
+              <label for="theme-toggle"></label>
+            </div>
         </aside>
         <div class="content-container">
             <section id="about">
@@ -107,5 +113,6 @@
     </main>
     
     <script src="main.js"></script>
+    <script src="./ui/js/toggle.js"></script>
 </body>
 </html>

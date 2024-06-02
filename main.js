@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme)) {
+        document.body.classList.add('dark-mode');
+    }
     const links = document.querySelectorAll('.navbar a');
     const sections = document.querySelectorAll('section');
 
