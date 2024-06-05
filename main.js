@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     const savedTheme = localStorage.getItem('theme');
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const themeToggle = document.getElementById('theme-toggle');
 
     if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme)) {
         document.body.classList.add('dark-mode');
+        themeToggle.checked = true;
     }
     const links = document.querySelectorAll('.navbar a');
     const sections = document.querySelectorAll('section');

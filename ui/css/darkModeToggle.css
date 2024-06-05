@@ -1,16 +1,12 @@
-#hybrid {
-    visibility: hidden;
-}
-
 #theme-toggle {
-    visibility: hidden;
+    display: none;
 }
 
 #theme-toggle+label {
     display: inline-block;
     cursor: pointer;
-    height: 2em;
-    width: 2em;
+    height: 1.5em;
+    width: 1.5em;
     border-radius: 50%;
     transition: all 0.3s ease-in-out;
 }
@@ -22,4 +18,8 @@
 #theme-toggle:checked+label {
     background-color: transparent;
     box-shadow: inset -8px -7px 1px 1px #fff;
+}
+
+.container {
+    margin: 1em;
 }
