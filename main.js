@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const savedTheme = localStorage.getItem('theme');
-    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const themeToggle = document.getElementById('theme-toggle');
 
     if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme)) {
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const observerCallback = (entries) => {
         entries.forEach(entry => {
             const id = entry.target.getAttribute('id');
-            const link = document.querySelector(`.navbar a[href="#${id}"]`);
+            const link = document.querySelector(`.navbar a[href='#${id}']`);
             if (entry.isIntersecting) {
                 link.classList.add('active');
             } else {
