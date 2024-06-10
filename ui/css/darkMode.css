@@ -48,3 +48,12 @@ body.dark-mode .card {
 body.dark-mode .card-header-date {
     color: #d9d9d9;
 }
+
+body.dark-mode .page-header {
+    background-color: #000;
+    color: white;
+}
+
+body.dark-mode .nav-toggle {
+    color: white;
+}
