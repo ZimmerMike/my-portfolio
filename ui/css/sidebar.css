@@ -1,11 +1,9 @@
-
-
 .navbar-header {
     display: none;
 }
 
 .page-title {
-    font-size: 1.75em;
+    font-size: 1.5em;
     text-align: center;
 }
 
@@ -26,7 +24,6 @@
 .links-container > a {
     text-decoration: none;
     color: black;
-    font-size: larger;
     transition: ease;
     transition-duration: 300ms;
 }
@@ -52,6 +49,7 @@
     border-radius: 3px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     padding: 3em;
+    z-index: 2;
 }
 
 .navbar {
@@ -66,7 +64,6 @@
 .navbar a {
     text-decoration: none;
     color: black;
-    border-radius: 5px;
 }
 
 .navbar-item {
@@ -78,7 +75,6 @@
     min-width: 300px;
     transition: ease;
     transition-duration: 300ms;
-    border-radius: 5px;
 }
 
 .navbar-item i {
@@ -96,23 +92,17 @@
     color: black;
 }
 
-.personal-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
     .page-header {
         display: flex;
+        padding: 1em;
         width: 100%;
-        padding: .5em;
         position: fixed;
         background-color: whitesmoke;
     }
 
     .page-title {
-        font-size: 1.25em;
+        font-size: 1em;
         text-align: center;
         margin-left: 1em;
         margin-right: 1em;
@@ -153,7 +143,7 @@
         flex-direction: row-reverse;
         top: 0;
         width: 100%;
-        padding: .5em;
+        padding: 1em;
         position: fixed;
     }
 
