@@ -7,11 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.add('dark-mode');
         themeToggle.checked = true;
     }
-    const links = document.querySelectorAll('.navbar a');
+    const links = document.querySelectorAll('.navbar-item a');
     const sections = document.querySelectorAll('section');
 
     for (const link of links) {
         link.addEventListener('click', function(event) {
+            navContainer.classList.remove('nav-visible');
+            overlay.classList.remove('overlay-visible');
             event.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
@@ -25,14 +27,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Intersection Observer to highlight active link
     const observerOptions = {
         root: null,
-        rootMargin: '0px',
+        rootMargin: "0px",
         threshold: 0.5
     };
 
     const observerCallback = (entries) => {
         entries.forEach(entry => {
             const id = entry.target.getAttribute('id');
-            const link = document.querySelector(`.navbar a[href='#${id}']`);
+            const link = document.querySelector(`.navbar-item a[href='#${id}']`);
             if (entry.isIntersecting) {
                 link.classList.add('active');
             } else {

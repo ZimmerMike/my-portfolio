@@ -39,12 +39,8 @@
     position: sticky;
     top: 50%;
     transform: translateY(-50%);
-    height: fit-content;
-    max-height: 100vh;
-    overflow-y: auto;
     width: 40%;
-    min-width: 350px;
-    max-width: 400px;
+    min-width: min-content;
     background-color: white;
     border-radius: 3px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -57,19 +53,12 @@
     flex-direction: column;
     align-items: center;
     list-style: none;
-    gap: 1em;
     padding: 0;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: black;
 }
 
 .navbar-item {
     text-align: center;
     align-items: center;
-    padding: 1em 2em;
     height: fit-content;
     width: 50%;
     min-width: 300px;
@@ -77,22 +66,29 @@
     transition-duration: 300ms;
 }
 
+.navbar-item a {
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    color: black;
+}
+
 .navbar-item i {
     margin-right: 1em;
 }
 
-.navbar a:hover {
+.navbar-item:hover {
     background-color: whitesmoke;
     color: black;
 }
 
-.navbar a.active {
+.navbar-item a.active {
     background-color: whitesmoke;
     font-weight: bolder;
     color: black;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 768px) {
     .page-header {
         display: flex;
         padding: 1em;
@@ -147,14 +143,6 @@
         position: fixed;
     }
 
-    .navbar > a {
-        display: flex;
-        justify-content: center;
-        width: fit-content;
-        width: 100%;
-        min-width: 0px;
-    }
-
     .navbar-item {
         display: flex;
         flex-direction: row;
@@ -164,6 +152,16 @@
         min-width: auto;
         width: 100%;
         border-radius: 0;
+    }
+
+    .navbar-item a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        width: 100%;
+        min-width: 0px;
     }
 
     .nav-container.nav-visible {

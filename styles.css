@@ -15,6 +15,13 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+footer {
+    margin-top: 3em;
+    padding: 3em;
+    height: 300px !important;
+    background-color: red;
+}
+
 .general-container {
     display: flex;
     flex-direction: row;
@@ -45,7 +52,6 @@ body {
     align-items: center;
     justify-items: center;
     width: 60%;
-    min-width: 600px;
 }
 
 .content-container > section {
@@ -68,6 +74,7 @@ body {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     min-width: 350px;
     width: 90%;
+    max-width: 650px;
 }
 
 .card-header-detail {
@@ -77,8 +84,17 @@ body {
 }
 
 .card-header-subtitle {
-    font-weight: bold;
+    font-weight: 600;
     text-overflow: ellipsis;
+}
+
+.card-header-subtitle a {
+    margin-left: -10px;
+    padding: 5px 10px;
+    background-color: rgb(0, 136, 255);
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
 }
 
 .card-header-date {
@@ -90,6 +106,12 @@ body {
 
 .card-content {
     margin-top: 1em;
+}
+
+.technologies {
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
 }
 
 #overlay {
@@ -111,7 +133,7 @@ body {
 }
 
 /*responsive design*/
-@media (max-width: 1080px) {
+@media (max-width: 768px) {
     .general-container {
         margin-top: 2em;
         flex-direction: column;
@@ -120,17 +142,29 @@ body {
 
     .content-container {
         display: flex;
-        padding: 0;
-        width: 90%;
+        width: 100%;
         min-width: auto;
         flex-direction: column;
         gap: 4em;
+    }
+
+    .page-header {
+        position: absolute;
+    }
+
+    .card {
+        padding: 2em;
+        width: 95%;
     }
 
     .card-header-detail {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+
+    .card-header-date {
+        margin-top: 1em;
     }
 
     .nav-container.nav-visible {
